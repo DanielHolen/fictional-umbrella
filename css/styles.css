@@ -1,0 +1,153 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Attribution */
+.attribution {
+  display: none;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 18px;
+  background-color: hsl(185, 75%, 39%);
+}
+
+/* Reusable classes */
+
+.purple-text {
+  color: hsl(229, 23%, 23%);
+}
+
+.grey-text {
+  color: hsl(0, 0%, 59%);
+}
+
+.lighter-text {
+  font-weight: 200;
+}
+
+.bold-text {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.smaller-text {
+  font-size: 12px;
+}
+
+.letter-spacing {
+  letter-spacing: .1rem;
+}
+
+.spacer {
+  padding: 5px 0;
+}
+
+/* Main Container */
+
+/* -- desktop */
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  /* Positions profile card centrally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__bgimage__top {
+  position: absolute;
+  top: -75%;
+  right: 50%;
+  z-index: -999;
+}
+
+.container__bgimage__bottom {
+    position: absolute;
+    bottom: -90%;
+    left: 50%;
+    z-index: -999;
+}
+
+/* -- iPhone 6/7/8 */
+@media only screen and (max-width: 375px) {
+  .container__bgimage__top {
+    top: -90%;
+    right: 40%;
+  }
+  .container__bgimage__bottom {
+    bottom: -90%;
+    left: 45%;
+  }
+}
+
+/* Profile Card */
+
+.profile__card {
+  background-color: white;
+  border-radius: 15px;
+  height: 380px;
+  width: 360px;
+}
+
+/* iPhone 6/7/8 */
+@media only screen and (max-width: 375px) {
+  .profile__card {
+    width: 330px;
+  }
+}
+
+/* -- iPhone X */
+@media only screen and (max-height: 812px) {
+  .profile__card {
+    height: 380px;
+  }
+}
+
+/* Profile Card Header */
+.profile__card__bgimage {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.profile__card header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__card__profile-photo {
+  border-radius: 50%;
+  border: 5px solid white;
+  transform: translate(0, -50%);
+}
+
+.profile__card__bio {
+  transform: translate(0, -50%);
+  text-align: center;
+}
+
+/* Profile Card Footer */
+
+.profile__card__stats {
+  border-top: 1px solid whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.profile__card__stats__container {
+  text-align: center;
+}
